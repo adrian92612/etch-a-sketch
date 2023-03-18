@@ -1,25 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkcyan;
+}
+
+.popup {
+  width: 50%;
+  height: 20%;
+  top: 90%;
+  left: 25%;
+  position: absolute;
+  border: 0 solid black;
+  border-radius: 15px;
+  background-color: bisque;
+  transform: scale(0.1);
+  transition: 0.3s;
+  visibility: hidden;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 5%;
+  transform: scale(1);
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+  background-color: lightcoral;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.color-containter {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.color {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5);
+}
+
+.btn-active {
+  background-color: blanchedalmond;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  margin-right: 50px;
 }
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 320px;
-    height: 320px;
-    border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 700px;
+  height: 700px;
+  outline: salmon groove 10px;
+  /* overflow: hidden; */
+  box-shadow: 0 100px 100px rgba(0, 0, 0, 0.3);
 }
 
 .grid-unit {
-    padding: 0;
-    margin: 0;
-    height: 18px;
-    width: 18px;
-    border: 1px solid black;
-}
-
-.grid-unit:hover {
-    background-color: brown;
+  border: 0.1px solid rgba(0, 0, 0, 0.1);
 }
