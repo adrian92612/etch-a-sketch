@@ -10,7 +10,7 @@ const pixelRange = document.querySelector(".grid-pixel");
 const pixelDisplay = document.querySelector(".pixel p");
 const gridWidth = 700;
 const gridHeight = 700;
-const colorChange = 255 * 0.1; //  +/- 5% change
+const colorChange = 255 * 0.1; //  +/- 10% change
 
 let r = 0;
 let g = 0;
@@ -92,6 +92,8 @@ btnEraseAll.addEventListener("click", () => {
   grid.forEach((grid) => (grid.style.backgroundColor = `rgb(255,255,255)`));
   rainbowMode = false;
   eraseMode = false;
+  darkenMode = false;
+  lightenMode = false;
   removeActiveBtn();
   colorPicked();
 });
