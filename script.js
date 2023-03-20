@@ -116,6 +116,7 @@ function createGrid() {
     grid.style.width = `${gridWidth / pixelRange.value}px`;
     grid.style.height = `${gridHeight / pixelRange.value}px`;
     grid.addEventListener("mouseover", hoverTrail);
+    grid.addEventListener("click", hoverTrail);
     mainContainer.appendChild(grid).classList.add("grid-unit");
   }
 }
@@ -166,7 +167,7 @@ function lightenModeOn(x) {
 }
 
 function hoverTrail(e) {
-  if (e.buttons == 1) {
+  if (e.buttons == 1 || e.type == "click") {
     if (rainbowMode) {
       rainbowModeOn();
     } else if (eraseMode) {
